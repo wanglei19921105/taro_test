@@ -1,27 +1,63 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
+import { PostCard, PostForm } from '../../components'
 import './index.scss'
 
 export default class Index extends Component {
-
-  config = {
-    navigationBarTitleText: '首页'
+  state = {
+    posts: [
+      {
+        id: 1,
+        title: '泰罗奥特曼',
+        content: '泰罗是奥特之父和奥特之母唯一的亲生儿子。',
+      },
+    ],
+    formTitle: '',
+    formContent: '',
   }
 
-  componentWillMount () { }
+  config = {
+    navigationBarTitleText: '首页',
+  }
 
-  componentDidMount () { }
+  handleSubmit(e) {
+    e.preventDefault()
 
-  componentWillUnmount () { }
+    const { formTitle: title, formContent: content } = this.state
+    const newPosts = this.state.posts.concat({ title, content })
 
-  componentDidShow () { }
+    this.setState({
+      posts: newPosts,
+      formTitle: '',
+      formContent: '',
+    })
+  }
 
-  componentDidHide () { }
+  handleTitleInput(e) {
+    this.setState({
+      formTitle: e.target.value,
+    })
+  }
 
-  render () {
+  handleContentInput(e) {
+    this.setState({
+      formContent: e.target.value,
+    })
+  }
+
+  render() {
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
+      <View className="index">
+        {this.state.posts.map((post, index) => (
+          <PostCard key={post.id} title={post.title} content={post.content} />
+        ))}
+        <PostForm
+          formTitle={this.state.formTitle}
+          formContent={this.state.formContent}
+          handleSubmit={e => this.handleSubmit(e)}
+          handleTitleInput={e => this.handleTitleInput(e)}
+          handleContentInput={e => this.handleContentInput(e)}
+        />
       </View>
     )
   }
