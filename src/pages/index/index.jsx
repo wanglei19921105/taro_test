@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { PostCard, PostForm } from '../../components'
+import PostCard from '../../components/PostCard'
+import PostForm from '../../components/PostForm'
 import './index.scss'
 
 export default class Index extends Component {
