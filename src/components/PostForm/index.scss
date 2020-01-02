@@ -1,29 +1,43 @@
 .post-form {
-  border: 1px solid #ddd;
-  margin: 30px;
+  margin: 0 30px;
   padding: 30px;
 }
 
-.input-title {
-  border: 1px solid #eee;
-  padding: 10px;
-  font-size: medium;
+.article_title {
+  line-height: 34px;
+  height: 34px;
+  font-size: 26px;
+  color: #666;
+  padding-left: 20px;
+  position: relative;
+  margin:0.8rem 0;
 }
-
-.input-content {
-  border: 1px solid #eee;
-  padding: 10px;
-  height: 200px;
-  font-size: medium;
+.article_title::before{
+  content: '';
+  width: 6px;
+  height: 34px;
+  background-color: #fa8956;
+  position: absolute;
+  left: 0;
+  border-radius: 3px;
 }
-
-.form-hint {
-  font-size: small;
-  color: gray;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.new_input {
+  padding: 15px 20px;
+  border: 1px solid rgba(204,204,204,0.6);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px;
+  font-size: 26px;
 }
-
-.form-button {
-  margin-top: 40px;
+.answer_textarea {
+  padding: 15px 20px;
+  border: 1px solid rgba(204,204,204,0.6);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  line-height: 45px;
+  min-height: 480px;
+  font-size: 26px;
 }
