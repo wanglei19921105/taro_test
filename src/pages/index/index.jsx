@@ -2,8 +2,7 @@ import Taro, { useState } from '@tarojs/taro'
 import { View , Text } from '@tarojs/components'
 import { AtFab, AtFloatLayout, AtMessage } from 'taro-ui'
 
-import PostCard from '../../components/PostCard'
-import PostForm from '../../components/PostForm'
+import {PostCard , PostForm} from '../../components'
 import './index.scss'
 
 export default function Index() {

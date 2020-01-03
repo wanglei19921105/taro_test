@@ -1,6 +1,6 @@
 import Taro, { useRouter } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import PostCard from '../../components/PostCard'
+import {PostCard} from '../../components'
 
 import './post.scss'
 
