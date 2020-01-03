@@ -381,3 +381,15 @@ input[type="radio"]:checked:after {
     background-size: 19px 19px;
 }
 
+.at-radio__title {
+  font-size: 26px;
+}
+.at-button {
+  height: 70px;
+  line-height: 70px;
+  font-size: 26px;
+  margin-top: 5px;
+}
+.at-radio::before,.at-radio::after{
+  border: 0;
+}

@@ -13,21 +13,22 @@ export default function PostForm(props) {
           <Input
             className="new_input"
             type="text"
-            placeholder="点击输入标题"
-            required
+            placeholder="反馈类型，多个使用逗号区分..."
+            required="true"
             value={props.formTitle}
             onInput={props.handleTitleInput}
           />
           <View className="article_title">反馈内容：</View>
           <Textarea
-            placeholder="点击输入正文"
+            placeholder="反馈内容填写区域"
             className="answer_textarea"
-            required
+            required="true"
             value={props.formContent}
             onInput={props.handleContentInput}
           />
           <View className="article_title">反馈方式：</View>
           <AtRadio
+            className = "font_26"
             options={[
               { label: '实名', value: '1', desc: '' },
               { label: '匿名', value: '2' }
